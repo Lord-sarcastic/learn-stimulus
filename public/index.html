@@ -6,6 +6,35 @@
   <script src="bundle.js" async></script>
 </head>
 <body>
-  <h1 data-controller="example"></h1>
+  <div data-controller="clipboard">
+    Pin: <input data-clipboard-target="pin" type="text" value="1234" readonly>
+    <button data-action="clipboard#copy" class="clipboard-button">Copy to clipboard</button>
+  </div>
+  <div data-controller="clipboard">
+    Pin: <input data-clipboard-target="pin" type="text" value="9092" readonly>
+    <button data-action="clipboard#copy" class="clipboard-button">Copy to clipboard</button>
+  </div>
+  <div data-controller="clipboard">
+    Pin: <input data-clipboard-target="pin" type="text" value="9838" readonly>
+    <button data-action="clipboard#copy" class="clipboard-button">Copy to clipboard</button>
+  </div>
+  <div data-controller="clipboard">
+    Pin: <input data-clipboard-target="pin" type="text" value="8488" readonly>
+    <button data-action="clipboard#copy" class="clipboard-button">Copy to clipboard</button>
+  </div>
+
+  <div data-controller="slideshow" data-slideshow-index-value="1">
+    <button data-action="slideshow#previous" class="slide-btn">Previous</button>
+    <button data-action="slideshow#next" class="slide-btn">Next</button>
+    <div>
+      <div data-slideshow-target="slide" class="slide">1</div>
+      <div data-slideshow-target="slide" class="slide">2</div>
+      <div data-slideshow-target="slide" class="slide">3</div>
+      <div data-slideshow-target="slide" class="slide">4</div>
+    </div>
+  </div>
+
+  <div data-controller="content-loader" data-content-loader-url-value="/messages.html" data-content-loader-refresh-interval-value="5000">
+  </div>
 </body>
 </html>
